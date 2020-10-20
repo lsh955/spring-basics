@@ -17,9 +17,9 @@ public class OrderServiceImpl implements OrderService {
 
     /**
      * 주문생성
-     * @param memberId
-     * @param itemName
-     * @param itemPrice
+     * @param memberId  사용자아이디
+     * @param itemName  아이템이름
+     * @param itemPrice 아이템가격
      * @return
      */
     @Override
