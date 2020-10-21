@@ -10,6 +10,7 @@ public interface DiscountPolicy {
 
     /**
      * 할인대상 금애
+     *
      * @param member
      * @param price
      * @return

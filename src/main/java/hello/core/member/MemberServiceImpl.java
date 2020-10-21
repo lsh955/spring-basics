@@ -3,7 +3,7 @@ package hello.core.member;
 /**
  * @author 이승환
  * @since 2020-10-20
- *
+ * <p>
  * 클래스명 뒤 Impl 키워드는 구현체가 1개 있을때 관례상 넣어준다고 한다.
  */
 public class MemberServiceImpl implements MemberService {
@@ -16,6 +16,7 @@ public class MemberServiceImpl implements MemberService {
 
     /**
      * 회원가입
+     *
      * @param member
      */
     @Override
@@ -25,6 +26,7 @@ public class MemberServiceImpl implements MemberService {
 
     /**
      * 사용자 찾기
+     *
      * @param memberId
      * @return
      */

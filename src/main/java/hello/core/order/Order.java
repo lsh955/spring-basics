@@ -20,6 +20,7 @@ public class Order {
 
     /**
      * 최종 계산된 금액
+     *
      * @return 아이템가격 - 할인금액
      */
     public int calculatePrice() {
