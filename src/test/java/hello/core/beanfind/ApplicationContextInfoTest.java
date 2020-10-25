@@ -10,7 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @author 이승환
  * @since 2020-10-25
  */
-public class ApplicationContextInfoTest {
+class ApplicationContextInfoTest {
 
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
