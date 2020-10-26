@@ -6,6 +6,8 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.*;
+
 /**
  * @author 이승환
  * @since 2020-10-21
@@ -24,7 +26,7 @@ class RateDiscountPolicyTest {
         int discount = discountPolicy.discount(member, 10000);
 
         // then
-        Assertions.assertThat(discount).isEqualTo(1000);
+        assertThat(discount).isEqualTo(1000);
     }
 
     @Test
@@ -37,7 +39,7 @@ class RateDiscountPolicyTest {
         int discount = discountPolicy.discount(member, 10000);
 
         // then
-        Assertions.assertThat(discount).isEqualTo(0);
+        assertThat(discount).isEqualTo(0);
     }
 
 }
