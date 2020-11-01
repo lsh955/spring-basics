@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 public class SingletonTest {
 
     @Test
-    @DisplayName("")
+    @DisplayName("스프링 없는 순수한 DI 컨테이너")
     void pureContainer(){
         AppConfig appConfig = new AppConfig();
 
