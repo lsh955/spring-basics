@@ -13,6 +13,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderServiceImpl implements OrderService {
 
+    /**
+     * 필드주입식 @Autowired는 사용하지 말자!
+     * 코드가 간결해서 보기가 좋으나 외부에서 변경이 불가능해서 테스트 하기 힘들다는 단점이 있다.
+     */
+//    @Autowired private MemberRepository memberRepository;
+//    @Autowired private DiscountPolicy discountPolicy;
+
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
