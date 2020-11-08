@@ -1,5 +1,6 @@
 package hello.core.order;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
@@ -29,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
      * @RequiredArgsConstructor 롬복 어노테이션 적용으로, 아래의 클래스 생성자를 자동으로 생성.
      * 이로서 아래의 생성자는 명시적으로 작성할 필요가 없다.
      */
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
