@@ -3,7 +3,7 @@ package hello.core.order;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,7 +11,11 @@ import org.springframework.stereotype.Component;
  * @since 2020-10-20
  */
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
+
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
 
     /**
      * 필드주입식 @Autowired는 사용하지 말자!
@@ -20,14 +24,14 @@ public class OrderServiceImpl implements OrderService {
 //    @Autowired private MemberRepository memberRepository;
 //    @Autowired private DiscountPolicy discountPolicy;
 
-    private final MemberRepository memberRepository;
-    private final DiscountPolicy discountPolicy;
-
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
+    /**
+     * @RequiredArgsConstructor 롬복 어노테이션 적용으로, 아래의 클래스 생성자를 자동으로 생성.
+     * 이로서 아래의 생성자는 명시적으로 작성할 필요가 없다.
+     */
+//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
 
     /**
      * 주문생성
