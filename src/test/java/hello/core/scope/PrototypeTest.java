@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Scope;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import static org.assertj.core.api.Assertions.*;
+
 /**
  * @author 이승환
  * @since 2020-11-15
@@ -25,7 +27,7 @@ public class PrototypeTest {
 
         System.out.println("prototypeBean1 = " + prototypeBean1);
         System.out.println("prototypeBean2 = " + prototypeBean2);
-        Assertions.assertThat(prototypeBean1).isNotSameAs(prototypeBean2);
+        assertThat(prototypeBean1).isNotSameAs(prototypeBean2);
 
         ac.close();
     }
