@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author 이승환
@@ -19,6 +20,7 @@ public class BeanLifecycleTest {
         ac.close();
     }
 
+    @Configuration
     static class LifecycleConfig {
 
         @Bean
