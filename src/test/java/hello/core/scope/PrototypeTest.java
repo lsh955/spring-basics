@@ -1,6 +1,5 @@
 package hello.core.scope;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Scope;
@@ -41,7 +40,7 @@ public class PrototypeTest {
 
         @PreDestroy
         public void destroy() {
-            System.out.println("PrototypeBean.destor");
+            System.out.println("PrototypeBean.destroy");
         }
     }
 
