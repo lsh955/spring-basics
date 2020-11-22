@@ -1,6 +1,7 @@
 package hello.core.common;
 
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -12,7 +13,7 @@ import java.util.UUID;
  * @since 2020-11-22
  */
 @Component
-@Scope(value = "request")
+@Scope(value = "request", proxyMode = ScopedProxyMode.TARGET_CLASS) // 스프링 컨테이너는 CGLIB 이라는 바이트 코드를 조작하는 라이브러리를 사용해서 가짜 프로시 객체를 생성.
 public class MyLogger {
 
     private String uuid;
